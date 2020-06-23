@@ -1,0 +1,18 @@
+<!--components/column_item/index.wxml-->
+<view class="course_item">
+  <view class="course_item_left">
+    <image class="course_cover" src="{{cover_src}}"></image>
+  </view>
+  <view class="course_item_right">
+    <view class="title">{{title}}</view>
+    <view class="introduction">{{introduction}}</view>
+    <view class="level">
+      <text>{{author}} · </text>
+      <text>{{position}}</text>
+    </view>
+    <view class="price">
+      <text>￥{{price}}</text>
+      <text style="padding-left:40px">{{subscribe}}人订阅</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<!--components/line_item/index.wxml-->
+<view class="course_item">
+  <view class="course_item_left">
+    <image class="course_cover" src="{{cover_src}}"></image>
+    <image class="course_cover1" src="{{cover_src}}"></image>
+    <image class="course_cover2" src="{{cover_src}}"></image>
+  </view>
+  <view class="course_item_right">
+    <view class="title">{{title}}</view>
+    <view class="introduction">{{introduction}}</view>
+    <view class="level">
+      <text>{{step}}步骤 · </text>
+      <text>{{courses}}门课</text>
+      <text style="padding-left:25px">{{comment_num}}人收藏</text>
+    </view>
+  </view>
+</view>

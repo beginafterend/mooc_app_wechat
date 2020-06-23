@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "article_item": "/components/article/article",
+    "mp-tabs": "/components/tabs/index"
+  }
+}

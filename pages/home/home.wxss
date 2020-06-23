@@ -1,0 +1,215 @@
+/* pages/home/home.wxss */
+
+.page__hd {
+  margin: 5px 20px
+}
+
+.search_button {
+  width: 100% !important;
+  background-color:#e0e0e0;
+  border: 1px solid rgba(54, 54, 54, 0.2);
+  border-radius: 10px;
+  color: #535353;
+  padding: 3px 10px;
+}
+
+.icon_email .weui-icon {
+  margin: 3px 0px 3px 15px;
+}
+
+.weui-tabs-bar__wrp {
+  padding: 10px 5px 0 5px;
+}
+
+.weui-tabs-swiper {
+  width: 100%
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 15rpx 0;
+}
+
+.weui-tabs-bar__title {
+  margin: 0px 0px;
+}
+
+.tab-bar-title__selected {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+.tuijian_banner {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.icon_volume_up .weui-icon {
+  margin: 3px 5px 3px 0px;
+}
+
+.ad {
+  width:100%;
+  height:100%;
+  font-size:16px;
+  line-height: 1.8;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.icon_more {
+  margin: 3px 0px 3px 5px;
+}
+
+.title {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.introduction {
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 5px;
+  color: #8a8a8a;
+}
+
+.lingWork {
+  width: 100%;
+  height: 70px;
+}
+
+.placeholder {
+  margin: 3px 5px;
+  text-align: center;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.learn_line {
+  font-size: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.learn_line_tab {
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  padding: 0px 10px !important;
+  border-color: rgb(73, 73, 73);
+  border-width: 1px;
+  border-style: solid;
+  margin-right: 15px;
+  font-weight: 500;
+  color: rgb(73, 73, 73);
+  background-color: white;  
+}
+
+.learn_line_tab_active {
+  color: white;
+  background-color: red;  
+  border-color: red;
+}
+
+.line_more {
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 5px 20px !important;
+  font-weight: 500;
+  color: rgb(73, 73, 73);
+  background-color: rgb(238, 238, 238); 
+}
+
+.mostSearch {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 60px !important;
+  font-size: 12px !important;
+  font-weight: 300;
+  padding: 0 8px !important;
+  border-radius: 10px;
+}
+
+.footer_word {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgb(121, 121, 121);
+}
+
+.mianfei_tab {
+  display: inline-block;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 0px 10px !important;
+  font-weight: 500;
+  color: rgb(114, 114, 114);
+  background-color: white;
+  float: left;
+}
+.mianfei_tab_active {
+  color: rgb(17, 17, 17);
+}
+
+.mianfei_all {
+  display: inline-block;
+  font-size: 14px !important;
+  line-height: 10px !important;
+  padding: 0px 10px !important;
+  font-weight: 500;
+  color: rgb(114, 114, 114);
+  background-color: white;
+  float: right;
+}
+
+.shizhan_tab {
+  display: inline-block;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 0px 10px !important;
+  font-weight: 500;
+  color: rgb(114, 114, 114);
+  background-color: white;
+  float: left;
+}
+
+.shizhan_tab_active {
+  color: rgb(17, 17, 17);
+}
+
+.shizhan_all {
+  display: inline-block;
+  font-size: 14px !important;
+  line-height: 10px !important;
+  padding: 0px 10px !important;
+  font-weight: 500;
+  color: rgb(114, 114, 114);
+  background-color: white;
+  float: right;
+}

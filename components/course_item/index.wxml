@@ -1,0 +1,19 @@
+<!--components/course_item/index.wxml-->
+<view class="course_item">
+  <view class="course_item_left">
+    <view class="mark {{mark_class}}">{{mark}}</view>
+    <image class="course_cover" src="{{cover_src}}"></image>
+  </view>
+  <view class="course_item_right">
+    <view class="title">{{title}}</view>
+    <view class="level">
+      <text>{{level}}</text>
+      <mp-icon style="padding-left:8px" type="outline" icon="me" color="#797979" size="{{15}}"></mp-icon>
+      <text>{{study_num}}</text>
+      <text style="padding-left:8px">{{comment_num}}人评论</text>
+    </view>
+    <view class="price">
+      {{display_price}}
+    </view>
+  </view>
+</view>

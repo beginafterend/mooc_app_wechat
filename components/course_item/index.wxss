@@ -1,0 +1,88 @@
+/* components/course_item/index.wxss */
+
+.course_item {
+  width: 100%;
+}
+
+.course_item_left {
+  margin-bottom: 25px;
+  position: relative;
+  width: 40%;
+  float: left;
+  height: 78px;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  color: white;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.mark_class1 {
+  background-color: red;
+}
+
+.mark_class2 {
+  background-color: rgb(255, 166, 0);
+}
+
+.mark_class3 {
+  background-color: rgb(212, 0, 255);
+}
+
+.mark_class4 {
+  display: none;
+}
+
+.course_cover{
+  width: 110px;
+  float: left;
+  height: 70px;
+  border-radius: 5px;
+  max-width: 90%;
+}
+
+.course_item_right {
+  margin-bottom: 25px;
+  width: 55%;
+  margin-right: 5%;
+  float: left;
+  height: 78px;
+}
+
+.title {
+  text-align: left;
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.icon_me {
+
+}
+
+.level {
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  color: #797979;
+}
+
+.price {
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  color: #797979;
+}

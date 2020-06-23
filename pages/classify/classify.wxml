@@ -1,0 +1,265 @@
+<!--pages/classify/classify.wxml-->
+<mp-vtabs 
+  vtabs="{{vtabs}}" 
+  activeTab="{{activeTab}}" 
+  bindtabclick="onTabCLick"
+  bindchange="onChange"
+  class="test"
+>
+  <block >
+    <view wx:if="{{activeTab==0}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img2.mukewang.com/5ee1f30609e7273f09000300.png" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e785b4009607da700840084.jpg"></image>
+            <view class="catagory_title">JavaScript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e81ab2a0906c4c700840084.jpg"></image>
+            <view class="catagory_title">Typescript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e7c50c8095ae83200840084.jpg"></image>
+            <view class="catagory_title">Vue</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==1}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img.mukewang.com/5ee0af4b0001fbda18720764.jpg" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e93fee2096df1fc00840084.jpg"></image>
+            <view class="catagory_title">C</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5ea63420093be02200840084.jpg"></image>
+            <view class="catagory_title">Go</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e9d1e730915fbd700840084.jpg"></image>
+            <view class="catagory_title">Java</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==2}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img2.mukewang.com/5ee1f30609e7273f09000300.png" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e785b4009607da700840084.jpg"></image>
+            <view class="catagory_title">JavaScript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e81ab2a0906c4c700840084.jpg"></image>
+            <view class="catagory_title">Typescript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e7c50c8095ae83200840084.jpg"></image>
+            <view class="catagory_title">Vue</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==3}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img.mukewang.com/5ee0af4b0001fbda18720764.jpg" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e93fee2096df1fc00840084.jpg"></image>
+            <view class="catagory_title">C</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5ea63420093be02200840084.jpg"></image>
+            <view class="catagory_title">Go</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e9d1e730915fbd700840084.jpg"></image>
+            <view class="catagory_title">Java</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==4}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img2.mukewang.com/5ee1f30609e7273f09000300.png" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e785b4009607da700840084.jpg"></image>
+            <view class="catagory_title">JavaScript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e81ab2a0906c4c700840084.jpg"></image>
+            <view class="catagory_title">Typescript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e7c50c8095ae83200840084.jpg"></image>
+            <view class="catagory_title">Vue</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==5}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img.mukewang.com/5ee0af4b0001fbda18720764.jpg" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e93fee2096df1fc00840084.jpg"></image>
+            <view class="catagory_title">C</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5ea63420093be02200840084.jpg"></image>
+            <view class="catagory_title">Go</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e9d1e730915fbd700840084.jpg"></image>
+            <view class="catagory_title">Java</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==6}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img2.mukewang.com/5ee1f30609e7273f09000300.png" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e785b4009607da700840084.jpg"></image>
+            <view class="catagory_title">JavaScript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e81ab2a0906c4c700840084.jpg"></image>
+            <view class="catagory_title">Typescript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e7c50c8095ae83200840084.jpg"></image>
+            <view class="catagory_title">Vue</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==7}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img.mukewang.com/5ee0af4b0001fbda18720764.jpg" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e93fee2096df1fc00840084.jpg"></image>
+            <view class="catagory_title">C</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5ea63420093be02200840084.jpg"></image>
+            <view class="catagory_title">Go</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e9d1e730915fbd700840084.jpg"></image>
+            <view class="catagory_title">Java</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==8}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img2.mukewang.com/5ee1f30609e7273f09000300.png" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e785b4009607da700840084.jpg"></image>
+            <view class="catagory_title">JavaScript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e81ab2a0906c4c700840084.jpg"></image>
+            <view class="catagory_title">Typescript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e7c50c8095ae83200840084.jpg"></image>
+            <view class="catagory_title">Vue</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==9}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img.mukewang.com/5ee0af4b0001fbda18720764.jpg" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e93fee2096df1fc00840084.jpg"></image>
+            <view class="catagory_title">C</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5ea63420093be02200840084.jpg"></image>
+            <view class="catagory_title">Go</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e9d1e730915fbd700840084.jpg"></image>
+            <view class="catagory_title">Java</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{activeTab==10}}" class="vtabs-content-item">
+      <image style="width: 90%; height: 110px; background-color: #FFFFFF;margin-left: 5%;border-radius: 5px;" src="https://img2.mukewang.com/5ee1f30609e7273f09000300.png" mode="aspectFill"></image>
+      <view class="weui-flex" style="text-align: center;">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e785b4009607da700840084.jpg"></image>
+            <view class="catagory_title">JavaScript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e81ab2a0906c4c700840084.jpg"></image>
+            <view class="catagory_title">Typescript</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="catagory" src="https://img.mukewang.com/wiki/5e7c50c8095ae83200840084.jpg"></image>
+            <view class="catagory_title">Vue</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</mp-vtabs>

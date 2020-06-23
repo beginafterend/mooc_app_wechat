@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/classify/classify",
+    "pages/find/find",
+    "pages/study/study"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#515151",
+    "color": "#cdcdcd",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home_on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "static/images/classify.png",
+        "selectedIconPath": "static/images/classify_on.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "static/images/find.png",
+        "selectedIconPath": "static/images/find_on.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "iconPath": "static/images/study.png",
+        "selectedIconPath": "static/images/study_on.png",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/index.png",
+        "selectedIconPath": "static/images/index_on.png",
+        "text": "账号"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

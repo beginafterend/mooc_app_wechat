@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar",
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon",
+    "mp-tabs": "/components/tabs/index",
+    "course-item": "/components/course_item/index",
+    "line-item": "/components/line_item/index",
+    "column-item": "/components/column_item/index"
+  }
+}

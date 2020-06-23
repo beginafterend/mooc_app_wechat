@@ -1,0 +1,19 @@
+<!--components/article/article.wxml-->
+<view class="weui-flex">
+  <view class="weui-flex__item">
+    <view class="placeholder">
+      <view class="title">{{title}}</view>
+      <view class="tags">
+        <block wx:for="{{tag_list}}" wx:key="title">
+          <button class="tag" size="mini" bindtap="search_tag">vue</button>
+        </block>
+        <text style="padding-left:25px">{{comment_num}}浏览</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <view class="placeholder">
+      <image class="article_cover" src="{{article_src}}"></image>
+    </view>
+  </view>
+</view>

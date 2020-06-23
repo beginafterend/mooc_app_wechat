@@ -1,0 +1,12 @@
+/* pages/find/find.wxss */
+
+.page__hd {
+  margin: 5px 20px
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

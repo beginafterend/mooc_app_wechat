@@ -1,0 +1,589 @@
+<!--pages/home/home.wxml-->
+<view class="page__hd page__bd_spacing">
+  <!-- 搜索和消息 -->
+  <view class="weui-flex">
+    <view class="weui-flex__item">
+      <view class="placeholder">
+        <button class="search_button" bindtap="toggleLoading">
+          <mp-icon type="outline" icon="search" color="black" size="{{20}}"></mp-icon>
+          Vue
+        </button>
+      </view>
+    </view>
+    <view>
+      <view class="placeholder">
+        <mp-icon class="icon_email" type="outline" icon="email" color="black" size="{{25}}"></mp-icon>
+      </view>
+    </view>
+  </view>
+  <!-- tabs导航 -->
+  <mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{activeTab}}" 
+  swiperClass="weui_tabs_swiper"
+  weuiTabsSwiperHeight="{{weui_tabs_swiper_height}}"
+  bindtabclick="onTabCLick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+  tab-underline-color="red"
+  space="space-between"
+  >
+  <!-- 推荐 -->
+  <scroll-view
+  scroll-y style="width: 100%; height: {{weui_tabs_swiper_height}}px;" 
+  class="tab-content" slot="tab-content-0">
+    <view class="page__bd page__bd_spacing">
+      <!-- 推荐banner -->
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image style="height:{{tuijian_banner_height}}px;" class="tuijian_banner" src="../../static/images/tuijian_swiper.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 推荐广告 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <mp-icon class="icon_volume_up" type="outline" icon="volume-up" color="#efa22e" size="{{25}}"></mp-icon>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="ad">今晚8点直播|双越带你30分钟从零开发“待办事项”WebApp</view>
+          </view>
+        </view>
+        <view>
+          <view class="placeholder">
+            <mp-icon class="icon_more" type="outline" icon="more" color="#8a8a8a" size="{{25}}"></mp-icon>
+          </view>
+        </view>
+      </view>
+      <!-- 零基础就业 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">零基础就业</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="introduction">1年以下开发经验体系课程</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_javaarchitect.png"></image>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_javafullstack.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_mobilearchitect.png"></image>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_webfullstack.png"></image>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_javaarchitect.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 职场进阶 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">职场进阶</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="introduction">1年以上开发经验体系课程</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_javaarchitect.png"></image>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_javafullstack.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_mobilearchitect.png"></image>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image class="lingWork" src="../../static/images/index_webfullstack.png"></image>
+          </view>
+        </view>
+      </view>
+      <!-- 新上好课 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">新上好课</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <swiper style="height:420px" indicator-dots="{{indicatorDots}}" previous-margin="{{previousMargin_xin}}px" next-margin="{{nextMargin_xin}}px" bindchange="changeSwiper" data-index="xin">
+              <swiper-item>
+                <block wx:for="{{xinshangCourse1}}" wx:key="title">
+                  <course-item
+                  mark="{{item.mark}}"
+                  title="{{item.title}}"
+                  level="{{item.level}}"
+                  study_num="{{item.study_num}}"
+                  comment_num="{{item.comment_num}}"
+                  price="{{item.price}}"
+                  cover_src="{{item.cover_src}}"
+                  ></course-item>
+                </block>
+              </swiper-item>
+              <swiper-item>
+                <block wx:for="{{xinshangCourse2}}" wx:key="title">
+                  <course-item
+                  mark="{{item.mark}}"
+                  title="{{item.title}}"
+                  level="{{item.level}}"
+                  study_num="{{item.study_num}}"
+                  comment_num="{{item.comment_num}}"
+                  price="{{item.price}}"
+                  cover_src="{{item.cover_src}}"
+                  ></course-item>
+                </block>
+              </swiper-item>
+            </swiper>
+          </view>
+        </view>
+      </view>
+      <!-- 学习路线 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">学习路线</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="introduction">职场进阶推荐路线</view>
+          </view>
+        </view>
+      </view>
+      <scroll-view scroll-x class="learn_line">
+        <button class="learn_line_tab {{learn_line_tab_active==1?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="1">热门</button>
+        <button class="learn_line_tab {{learn_line_tab_active==2?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="2">前端</button>
+        <button class="learn_line_tab {{learn_line_tab_active==3?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="3">后端</button>
+        <button class="learn_line_tab {{learn_line_tab_active==4?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="4">移动端</button>
+        <button class="learn_line_tab {{learn_line_tab_active==5?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="5">计算机基础</button>
+        <button class="learn_line_tab {{learn_line_tab_active==6?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="6">大数据</button>
+        <button class="learn_line_tab {{learn_line_tab_active==7?'learn_line_tab_active':''}}" size="mini" bindtap="learn_line_tab_click" data-index="7">测试</button>
+      </scroll-view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <block wx:for="{{learnLines}}" wx:key="title">
+              <line-item
+              title="{{item.title}}"
+              introduction="{{item.introduction}}"
+              step="{{item.step}}"
+              comment_num="{{item.comment_num}}"
+              courses="{{item.courses}}"
+              cover_src="{{item.cover_src}}"
+              ></line-item>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <button class="line_more" size="mini" bindtap="line_more">查看更多 > </button>
+          </view>
+        </view>
+      </view>
+      <!-- 热门实战 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">热门实战</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <swiper style="height:420px" indicator-dots="{{indicatorDots}}" previous-margin="{{previousMargin_shi}}px" next-margin="{{nextMargin_shi}}px" bindchange="changeSwiper" data-index="shi">
+              <swiper-item>
+                <block wx:for="{{remenCourse1}}" wx:key="title">
+                  <course-item
+                  mark="{{item.mark}}"
+                  title="{{item.title}}"
+                  level="{{item.level}}"
+                  study_num="{{item.study_num}}"
+                  comment_num="{{item.comment_num}}"
+                  price="{{item.price}}"
+                  cover_src="{{item.cover_src}}"
+                  ></course-item>
+                </block>
+              </swiper-item>
+              <swiper-item>
+                <block wx:for="{{remenCourse2}}" wx:key="title">
+                  <course-item
+                  mark="{{item.mark}}"
+                  title="{{item.title}}"
+                  level="{{item.level}}"
+                  study_num="{{item.study_num}}"
+                  comment_num="{{item.comment_num}}"
+                  price="{{item.price}}"
+                  cover_src="{{item.cover_src}}"
+                  ></course-item>
+                </block>
+              </swiper-item>
+            </swiper>
+          </view>
+        </view>
+      </view>
+      <!-- 热门免费 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">热门免费</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <swiper style="height:420px" indicator-dots="{{indicatorDots}}" previous-margin="{{previousMargin_mian}}px" next-margin="{{nextMargin_mian}}px" bindchange="changeSwiper" data-index="mian">
+              <swiper-item>
+                <block wx:for="{{mianfeiCourse1}}" wx:key="title">
+                  <course-item
+                  mark="{{item.mark}}"
+                  title="{{item.title}}"
+                  level="{{item.level}}"
+                  study_num="{{item.study_num}}"
+                  comment_num="{{item.comment_num}}"
+                  price="{{item.price}}"
+                  cover_src="{{item.cover_src}}"
+                  ></course-item>
+                </block>
+              </swiper-item>
+              <swiper-item>
+                <block wx:for="{{mianfeiCourse2}}" wx:key="title">
+                  <course-item
+                  mark="{{item.mark}}"
+                  title="{{item.title}}"
+                  level="{{item.level}}"
+                  study_num="{{item.study_num}}"
+                  comment_num="{{item.comment_num}}"
+                  price="{{item.price}}"
+                  cover_src="{{item.cover_src}}"
+                  ></course-item>
+                </block>
+              </swiper-item>
+            </swiper>
+          </view>
+        </view>
+      </view>
+      <!-- 专栏推荐 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <view class="title">专栏推荐</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="introduction">实用的知识手册</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <block wx:for="{{columns}}" wx:key="title">
+              <column-item
+              title="{{item.title}}"
+              introduction="{{item.introduction}}"
+              author="{{item.author}}"
+              position="{{item.position}}"
+              price="{{item.price}}"
+              subscribe="{{item.subscribe}}"
+              cover_src="{{item.cover_src}}"
+              ></column-item>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <button class="line_more" size="mini" bindtap="column_more">查看更多 > </button>
+          </view>
+        </view>
+      </view>
+      <!-- 大家都在学 -->
+      <view class="weui-flex">
+        <view>
+          <view class="placeholder">
+            <mp-icon style="line-height: 38px;" type="outline" icon="search" color="red" size="{{18}}"></mp-icon>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <view class="introduction" style="margin-left: -5px;font-size: 14px;color: rgb(73, 73, 73);">大家都在学</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">springboot</button>
+        </view></view>
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">小程序</button>
+        </view></view>
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">python</button>
+        </view></view>
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">java</button>
+        </view></view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">vue</button>
+        </view></view>
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">go</button>
+        </view></view>
+        <view class="weui-flex__item"><view class="placeholder">
+          <button class="mostSearch" size="mini" bindtap="search_most">node</button>
+        </view></view>
+        <view class="weui-flex__item"><view class="placeholder">
+          <button style="color:red;padding:0!important;background-color: rgb(250, 235, 235);" class="mostSearch" size="mini" bindtap="search_most">换一换
+            <mp-icon type="outline" icon="refresh" color="red" size="{{15}}"></mp-icon>
+          </button>
+        </view></view>
+      </view>
+      <view class="footer_word">— 编织梦想 · 程就未来 —</view>
+    </view>
+  </scroll-view>
+  <!-- 免费课 -->
+  <view class="tab-content" slot="tab-content-1" style="flex-direction: column;"> 
+    <view style="width: 100%;">
+      <button class="mianfei_tab {{mianfei_tab_active==1?'mianfei_tab_active':''}}" size="mini" bindtap="mianfei_tab_click" data-index="1">最新</button>
+      <button class="mianfei_tab {{mianfei_tab_active==2?'mianfei_tab_active':''}}" size="mini" bindtap="mianfei_tab_click" data-index="2">最热</button>
+      <button class="mianfei_all" size="mini" bindtap="mianfei_all_click">
+        全部
+        <mp-icon type="outline" icon="more2" color="black" size="{{20}}"></mp-icon>
+      </button>
+    </view>
+    <scroll-view scroll-y style="margin-top: 10px;width: 100%; height: {{weui_tabs_swiper_height}}px;" >
+      <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder">
+              <block wx:for="{{free_list}}" wx:key="title">
+                <course-item
+                mark="{{item.mark}}"
+                title="{{item.title}}"
+                level="{{item.level}}"
+                study_num="{{item.study_num}}"
+                comment_num="{{item.comment_num}}"
+                price="{{item.price}}"
+                cover_src="{{item.cover_src}}"
+                ></course-item>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 实战课 -->
+  <view class="tab-content" slot="tab-content-2" style="flex-direction: column;"> 
+    <swiper indicator-dots="true" autoplay="true" style="width: 100%;height: {{shizhan_banner_height}}px;bordor">
+      <block wx:for="{{shizhan_banners}}" wx:key="title">
+        <swiper-item>
+          <image style="width: 100%; height: 100%;border-radius: 5px;" src="{{item.src}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view style="width: 100%;margin-top: 20px;">
+      <button class="shizhan_tab {{shizhan_tab_active==1?'shizhan_tab_active':''}}" size="mini" bindtap="shizhan_tab_click" data-index="1">默认</button>
+      <button class="shizhan_tab {{shizhan_tab_active==2?'shizhan_tab_active':''}}" size="mini" bindtap="shizhan_tab_click" data-index="2">最新</button>
+      <button class="shizhan_tab {{shizhan_tab_active==3?'shizhan_tab_active':''}}" size="mini" bindtap="shizhan_tab_click" data-index="3">销量</button>
+      <button class="shizhan_tab {{shizhan_tab_active==4?'shizhan_tab_active':''}}" size="mini" bindtap="shizhan_tab_click" data-index="4">更新</button>
+      <button class="shizhan_all" size="mini" bindtap="shizhan_all_click">
+        全部
+        <mp-icon type="outline" icon="more2" color="black" size="{{20}}"></mp-icon>
+      </button>
+    </view>
+    <scroll-view scroll-y style="margin-top: 10px;width: 100%; height: {{weui_tabs_swiper_height}}px;" >
+      <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder">
+              <block wx:for="{{shizhan_list}}" wx:key="title">
+                <course-item
+                mark="{{item.mark}}"
+                title="{{item.title}}"
+                level="{{item.level}}"
+                study_num="{{item.study_num}}"
+                comment_num="{{item.comment_num}}"
+                price="{{item.price}}"
+                cover_src="{{item.cover_src}}"
+                ></course-item>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 金职位 -->
+  <scroll-view scroll-y style="width: 100%; height: {{weui_tabs_swiper_height}}px;" class="tab-content" slot="tab-content-3">
+    <view class="weui-flex">
+      <view>
+        <view class="placeholder">
+          <view class="title">零基础</view>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <view class="introduction">1年以下开发经验体系课程</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5eb8aa0109080be806960344.jpg"></image>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5ec1f764090acad506960344.jpg"></image>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5e1d385a099d08a206960344.jpg"></image>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5e1d389609f42f1306960344.jpg"></image>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5e1d36a0092cdd4006960344.jpg"></image>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5eb8c9e4095ee26503480172.jpg"></image>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view>
+        <view class="placeholder">
+          <view class="title">进阶</view>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <view class="introduction">1年以上开发经验体系课程</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5e1d394409972e3706960344.jpg"></image>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5e1d38ff09cd32a300000000.jpg"></image>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5e1d39210928fbe706960344.jpg"></image>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image class="lingWork" src="https://img.mukewang.com/climg/5ecfae94092eabc006960344.jpg"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 专栏 -->
+  <view class="tab-content" slot="tab-content-4" style="flex-direction: column;">
+    <view style="width: 100%;">
+      <button class="mianfei_tab {{zhuanlan_tab_active==1?'mianfei_tab_active':''}}" size="mini" bindtap="zhuanlan_tab_click" data-index="1">默认</button>
+      <button class="mianfei_tab {{zhuanlan_tab_active==2?'mianfei_tab_active':''}}" size="mini" bindtap="zhuanlan_tab_click" data-index="2">上新</button>
+      <button class="mianfei_tab {{zhuanlan_tab_active==3?'mianfei_tab_active':''}}" size="mini" bindtap="zhuanlan_tab_click" data-index="3">销量</button>
+      <button class="mianfei_tab {{zhuanlan_tab_active==4?'mianfei_tab_active':''}}" size="mini" bindtap="zhuanlan_tab_click" data-index="4">活动</button>
+    </view>
+    <scroll-view scroll-y style="margin-top: 10px;width: 100%; height: {{weui_tabs_swiper_height}}px;" >
+      <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="placeholder">
+              <block wx:for="{{columns}}" wx:key="title">
+                <column-item
+                title="{{item.title}}"
+                introduction="{{item.introduction}}"
+                author="{{item.author}}"
+                position="{{item.position}}"
+                price="{{item.price}}"
+                subscribe="{{item.subscribe}}"
+                cover_src="{{item.cover_src}}"
+                ></column-item>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  </mp-tabs>
+</view>
+
+
+
